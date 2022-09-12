@@ -3,6 +3,7 @@ module.exports = {
     title: `Gatsby Blog`,
     description: `ITDEV-164 Gatsby Blog`,
     author: `Abbi Kissee`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Abbi Kissee`, 
       company: `Blogs Inc.`,
@@ -10,7 +11,15 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+          spaceId: `cw6vr6hf95xh`,
+          accessToken: `Kyd23lvxH4GTivtsAzBXHX14ybnzcpIeKUdqgzCAyek`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
