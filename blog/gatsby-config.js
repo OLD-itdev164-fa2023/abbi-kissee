@@ -1,25 +1,21 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
-    description: `ITDEV-164 Gatsby Blog`,
-    author: `Abbi Kissee`,
+    description: `ITDEV-164 Gatsby Blog.`,
+    author: `Mike Hunsicker`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
-      name: `Abbi Kissee`, 
+      name: `Mike Hunsicker`,
       company: `Blogs Inc.`,
-      address: `PO Box 5678`
+      address: `PO Box 1234`
     }
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-          spaceId: `cw6vr6hf95xh`,
-          accessToken: `Kyd23lvxH4GTivtsAzBXHX14ybnzcpIeKUdqgzCAyek`
-      }
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,8 +23,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+          spaceId: `cw6vr6hf95xh`,
+          accessToken: `Kyd23lvxH4GTivtsAzBXHX14ybnzcpIeKUdqgzCAyek`
+        }
+      },
+      `gatsby-transformer-remark`,
+      `gatsby-transformer-sharp`,
+      `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
