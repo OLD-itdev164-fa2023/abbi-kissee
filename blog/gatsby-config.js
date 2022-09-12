@@ -6,12 +6,12 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
     description: `ITDEV-164 Gatsby Blog.`,
-    author: `Mike Hunsicker`,
+    author: `Abbi Kissee`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
-      name: `Mike Hunsicker`,
+      name: `Abbi Kissee`,
       company: `Blogs Inc.`,
-      address: `PO Box 1234`
+      address: `PO Box 5678`
     }
   },
   plugins: [
