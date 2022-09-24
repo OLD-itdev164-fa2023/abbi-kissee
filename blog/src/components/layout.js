@@ -30,6 +30,7 @@
      }
    `)
  
+   
    return (
      <ThemeProvider theme={Gray}>
        <Header siteTitle={data.site.siteMetadata.title || `Title`} />
