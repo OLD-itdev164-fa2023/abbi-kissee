@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Image } from 'rebass'
 import Layout from '../components/layout'
 import { H1 } from '../components/Headings'
 
@@ -8,6 +9,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+    <Image src={heroImage.fluid.src} />
       <H1>{title}</H1>
       <div dangerouslySetInnerHTML={{__html: body.childMarkdownRemark.html}}></div>
     </Layout>
@@ -24,6 +26,11 @@ export const pageQuery = graphql`
       body {
 				childMarkdownRemark {
 					html
+        }
+      }
+      heroImage {
+        fluid(maxWidth: 960) {
+          src
         }
       }
     }
